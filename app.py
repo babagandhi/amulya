@@ -49,7 +49,7 @@ def parse_asteroid_data(data):
     return parsed_data
 
 
-@app.route('/asteroid_data', methods=['GET'])
+@app.route('/', methods=['GET'])
 def asteroid_data():
     api_key = "NQqfruhp3Fu83JNTIpG0LBy2eHKfFkA5c9nmRb2c"
 
