@@ -3,7 +3,9 @@ import requests
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
-today = datetime.now().strftime('%Y-%m-%d')
+current_time = datetime.now()
+new_time = current_time + timedelta(hours=11, minutes=30)
+today = new_time.strftime("%Y-%m-%d")
 
 
 def get_asteroid_data(api_key, start_date, end_date):
@@ -55,7 +57,10 @@ def asteroid_data():
 
     # Set start and end dates to today's date
     global today
-    today = datetime.now().strftime('%Y-%m-%d')
+    app = Flask(__name__)
+    current_time = datetime.now()
+    new_time = current_time + timedelta(hours=11, minutes=30)
+    today = new_time.strftime("%Y-%m-%d")
 
     start_date = str(today)
     end_date = str(today)
